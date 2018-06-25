@@ -1,0 +1,152 @@
+＃有关忽略文件的更多信息，请参阅http://help.github.com/ignore-files/。
+
+＃依赖关系
+node_modules
+* / * / node_modules
+
+
+＃misc
+.DS_Store
+NPM-的debug.log
+纱的error.log
+。理念
+建立/*
+！DIST /下载
+！DIST /下载/ *
+！DIST / RES
+！DIST / RES / *
+### SublimeText模板
+＃缓存崇高文本的文件
+* .tmlanguage.cache
+* .tmPreferences.cache
+* .stTheme.cache
+
+＃工作区文件是用户特定的
+* .sublime工作空间
+
+＃项目文件应该检入到存储库中，除非是重要的
+＃贡献者的比例可能不会使用Sublime Text
+＃* .sublime-project
+
+＃SFTP配置文件
+SFTP-config.json
+
+＃包控制特定文件
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+包Control.cache /
+Package Control.ca-certs /
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-CA-bundle.crt
+bh_unicode_properties.cache
+
+＃Sublime-github包在此文件中存储github标记
+＃https://packagecontrol.io/packages/sublime-github
+GitHub.sublime的设置
+### Windows模板
+＃Windows缩略图缓存文件
+的Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+＃转储文件
+* .stackdump
+
+＃文件夹配置文件
+的Desktop.ini
+
+＃文件共享上使用的回收站
+$ RECYCLE.BIN /
+
+＃Windows安装程序文件
+*。出租车
+* .msi程序
+*的.msm
+*定义.msp
+
+＃Windows快捷键
+* .LNK
+### macOS模板
+＃ 一般
+＃.DS_Store
+.AppleDouble
+.LSOverride
+
+＃图标必须以两个\ r结尾
+＃图标
+
+＃缩略图
+._ *
+
+＃可能出现在卷的根目录中的文件
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+＃可能在远程AFP共享中创建的目录
+.AppleDB
+.AppleDesktop
+网络垃圾箱文件夹
+临时项目
+.apdisk
+### JetBrains模板
+＃涵盖JetBrains IDE：IntelliJ，RubyMine，PhpStorm，AppCode，PyCharm，CLion，Android Studio和Webstorm
+＃参考：https：//intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+＃用户特定的东西：
+.idea / ** / workspace.xml
+.idea / ** / tasks.xml
+.idea /字典
+
+＃敏感或高流失文件：
+.idea / ** /数据源/
+.idea / ** / dataSources.ids
+.idea / ** / dataSources.xml
+.idea / ** / dataSources.local.xml
+.idea / ** / sqlDataSources.xml
+.idea / ** / dynamic.xml
+.idea / ** / uiDesigner.xml
+
+＃Gradle：
+.idea / ** / gradle.xml
+.idea / ** /库
+
+＃CMake
+cmake的建造，调试/
+
+＃Mongo Explorer插件：
+.idea / ** / mongoSettings.xml
+
+##基于文件的项目格式：
+* .iws
+
+##插件特定的文件：
+
+＃IntelliJ
+输出/
+
+＃mpeltonen / sbt-idea插件
+.idea_modules /
+
+＃JIRA插件
+Atlassian的-IDE-的plugin.xml
+
+＃Cursive Clojure插件
+.idea / replstate.xml
+
+＃Crashlytics插件（适用于Android Studio和IntelliJ）
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+DIST
+* / * / DIST
+.rpk
