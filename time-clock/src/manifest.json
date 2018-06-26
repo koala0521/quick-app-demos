@@ -14,10 +14,10 @@
     { "origin": "*" }
   ],
   "config": {
-    "logLevel": "off"
+    "logLevel": "debug"
   },
   "router": {
-    "entry": "Demo",
+    "entry": "Home",
     "pages": {
       "Demo": {
         "component": "index"
@@ -27,17 +27,32 @@
       },
       "About": {
         "component": "index"
+      },
+      "Clock":{
+        "component": "index"
+      },
+      "Home":{
+        "component": "index"
       }
     }
   },
   "display": {
-    "titleBarBackgroundColor": "#f2f2f2",
-    "titleBarTextColor": "#414141",
+    "titleBarBackgroundColor": "#fff",
+    "titleBarTextColor": "#101010",
     "menu": true,
+    "titleBarText":"时光时钟",
     "pages": {
-      "Demo": {
-        "titleBarText": "示例页",
+      "Home": {
+        "titleBarText": "时光时钟",
         "menu": false
+      },
+      "Clock":{
+        "titleBarText": "时光时钟",
+        "menu": false        
+      },
+      "Demo":{        
+        "titleBarText": "时光时钟",
+        "menu": false           
       },
       "DemoDetail": {
         "titleBarText": "详情页"
