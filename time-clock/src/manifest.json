@@ -1,5 +1,5 @@
 {
-  "package": "com.application.demo",
+  "package": "com.timeClock.demo",
   "name": "time-clock",
   "versionName": "1.0.0",
   "versionCode": "1",
@@ -19,15 +19,6 @@
   "router": {
     "entry": "Home",
     "pages": {
-      "Demo": {
-        "component": "index"
-      },
-      "DemoDetail": {
-        "component": "index"
-      },
-      "About": {
-        "component": "index"
-      },
       "Clock":{
         "component": "index"
       },
@@ -49,16 +40,6 @@
       "Clock":{
         "titleBarText": "时光时钟",
         "menu": false        
-      },
-      "Demo":{        
-        "titleBarText": "时光时钟",
-        "menu": false           
-      },
-      "DemoDetail": {
-        "titleBarText": "详情页"
-      },
-      "About": {
-        "menu": false
       }
     }
   }

@@ -190,6 +190,9 @@
                 this.hourClass = 'rorate-' + (hour*30 + 90)%360;
                 // this.hourClass = 'hour-rorate-' + deg;
             },1000)
+        },
+        onMenuPress() {
+            this.$app.$def.showMenu()
         }             
     };
 
