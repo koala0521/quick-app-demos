@@ -13,7 +13,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;        
-        /* background-color: #5c616a;         */
     }
     .cicle{
         width: 700px;
@@ -27,7 +26,6 @@
     .pointer{
         width: 32px;
         height: 32px;
-        /* background-image: url('../Common/pointer.jpg'); */
         border-radius: 16px;
         border: 4px solid #3d3c3c;
         background-color: #f1f1f1;
@@ -194,7 +192,7 @@
             },1000)
         },
         onMenuPress() {
-            this.$app.$def.showMenu()
+            this.$app.$def.showMenu();
         }             
     };
 
