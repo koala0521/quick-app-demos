@@ -160,7 +160,6 @@
         // 页面级组件的数据模型，影响传入数据的覆盖机制：private内定义的属性不允许被覆盖
         private: {
             message: '逝者如斯夫，不舍昼夜。',
-            clockList:[1],
             hourClass:'',
             minuteClass:'',
             secondsClass:''   
@@ -173,17 +172,25 @@
             let hour = date.getHours();
             let minute = date.getMinutes();
             let second = date.getSeconds();
-            console.log( `hour>>>>${ hour }` , `minute>>>>${ minute }`, `second>>>>${ second*6 }` );
-            
+
+            this.secondsClass = 'rorate-' + (second*6 + 90)%360;
+            this.minuteClass = 'rorate-' + (minute*6 + 90)%360;
+            this.hourClass = 'rorate-' + (hour*30 + 90)%360;
+           
         },
         onReady(){
+            
+            // let date = new Date();
+            // let hour = date.getHours();
+            // let minute = date.getMinutes();
+            // let second = date.getSeconds();
+
             setInterval(()=>{
+
                 let date = new Date();
                 let hour = date.getHours()%12;
                 let minute = date.getMinutes();
                 let second = date.getSeconds();
-                
-                console.log( `hour>>>>${ hour*6 + 90 }` );
 
                 this.secondsClass = 'rorate-' + (second*6 + 90)%360;
                 this.minuteClass = 'rorate-' + (minute*6 + 90)%360;
