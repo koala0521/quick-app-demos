@@ -1,4 +1,7 @@
 <script>
+
+ import APP_STATISTICS from './appStatistics.min';
+
   /**
    * 应用级别的配置，供所有页面公用
    */
@@ -6,6 +9,12 @@
 
   export default {
     showMenu: util.showMenu,
-    createShortcut: util.createShortcut
+    createShortcut: util.createShortcut,
+    onCreate:function(){
+
+      //统计打点
+      APP_STATISTICS.app_sta_init( this );
+    }
+
   }
 </script>
