@@ -2,7 +2,7 @@
   "package": "com.timeClock.quickapp",
   "name": "时光时钟",
   "versionName": "1.0.0",
-  "versionCode": "1",
+  "versionCode": "3",
   "minPlatformVersion": "1000",
   "icon": "/Common/logo.png",
   "features": [
