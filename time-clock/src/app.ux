@@ -1,6 +1,10 @@
 <script>
 
- import APP_STATISTICS from './appStatistics.min';
+// 测试
+ import APP_STATISTICS from './appStatistics.test.min';
+
+// 上线
+//  import APP_STATISTICS from './appStatistics.min';
 
   /**
    * 应用级别的配置，供所有页面公用
@@ -14,7 +18,11 @@
 
       //统计打点
       APP_STATISTICS.app_sta_init( this );
-    }
+    },
+    onDestroy () {
+        // 退出 app 打点
+        APP_STATISTICS.app_destroy();              
+    },
 
   }
 </script>
