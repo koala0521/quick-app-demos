@@ -1,10 +1,10 @@
 <script>
 
 // 测试
- import APP_STATISTICS from './appStatistics.test.min';
+//  import APP_STATISTICS from './appStatistics.test.min';
 
 // 上线
-//  import APP_STATISTICS from './appStatistics.min';
+ import APP_STATISTICS from './appStatistics.min';
 
   /**
    * 应用级别的配置，供所有页面公用
@@ -15,13 +15,8 @@
     showMenu: util.showMenu,
     createShortcut: util.createShortcut,
     onCreate:function(){
-
-      //统计打点
+      //统计打点ß
       APP_STATISTICS.app_sta_init( this );
-    },
-    onDestroy () {
-        // 退出 app 打点
-        APP_STATISTICS.app_destroy();              
     },
 
   }

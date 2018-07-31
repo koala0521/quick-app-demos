@@ -193,7 +193,15 @@
         },
         onMenuPress() {
             this.$app.$def.showMenu();
-        }             
+        },
+        onShow(){
+                //App业务代码
+                APP_STATISTICS.page_show( this );
+            },
+        onHide() {
+            //App业务代码
+            APP_STATISTICS.page_hide( this );
+        }                      
     };
 
     
