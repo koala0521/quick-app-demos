@@ -1,3 +1,3 @@
 export default {
-  app_key : '867870ec5bef4676a57c1481072c6169'   //请在此行填写统计平台生产的 app_id
+  app_key : 'e76d5e069c9251e8acc4a14ca04700b3'   //请在此行填写统计平台生产的 app_id
 }
