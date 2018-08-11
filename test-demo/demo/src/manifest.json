@@ -1,9 +1,9 @@
 {
-  "package": "com.timeClock.quickapp",
-  "name": "时光时钟",
-  "versionName": "3.0.0",
-  "versionCode": "5",
-  "minPlatformVersion": "1000",
+  "package": "com.application.demo",
+  "name": "demo",
+  "versionName": "1.0.0",
+  "versionCode": "1",
+  "minPlatformVersion": "101",
   "icon": "/Common/logo.png",
   "features": [
     { "name": "system.prompt" },
@@ -12,7 +12,6 @@
     { "name": "system.fetch"},
     {"name": "system.storage"},
     {"name": "system.device"},
-    {"name": "system.geolocation"},
     {"name": "system.network"},
     {"name": "service.account"}    
   ],
@@ -20,35 +19,36 @@
     { "origin": "*" }
   ],
   "config": {
-    "logLevel": "debug",
-    "data":{
-      "umeng_appkey":"5b349563f29d98040200000c"
-    }
+    "logLevel": "off"
   },
   "router": {
-    "entry": "Home",
+    "entry": "Demo",
     "pages": {
-      "Clock":{
+      "Demo": {
         "component": "index"
       },
-      "Home":{
+      "DemoDetail": {
+        "component": "index"
+      },
+      "About": {
         "component": "index"
       }
     }
   },
   "display": {
-    "titleBarBackgroundColor": "#fff",
-    "titleBarTextColor": "#101010",
+    "titleBarBackgroundColor": "#f2f2f2",
+    "titleBarTextColor": "#414141",
     "menu": true,
-    "titleBarText":"时光时钟",
     "pages": {
-      "Home": {
-        "titleBarText": "时光时钟",
+      "Demo": {
+        "titleBarText": "示例页",
         "menu": false
       },
-      "Clock":{
-        "titleBarText": "时光时钟",
-        "menu": false        
+      "DemoDetail": {
+        "titleBarText": "详情页"
+      },
+      "About": {
+        "menu": false
       }
     }
   }

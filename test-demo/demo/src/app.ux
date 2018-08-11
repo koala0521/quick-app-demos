@@ -1,0 +1,15 @@
+<script>
+  /**
+   * 应用级别的配置，供所有页面公用
+   */
+  import util from './util';
+  import '../gulp/dist/appStatistics.min.js'
+
+  export default {
+    showMenu: util.showMenu,
+    createShortcut: util.createShortcut,
+    oncreate(){
+      APP_STATISTICS.app_sta_init(this);
+    }
+  }
+</script>

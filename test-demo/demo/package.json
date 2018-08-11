@@ -1,5 +1,5 @@
 {
-  "name": "time-clock",
+  "name": "demo",
   "version": "1.0.0",
   "subversion": {
     "toolkit": "0.0.34"
@@ -32,7 +32,6 @@
     "webpack": "^3.11.0"
   },
   "dependencies": {
-    "js-base64": "^2.4.8",
     "md5": "^2.2.1"
   }
 }
