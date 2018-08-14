@@ -76,13 +76,17 @@
             })
             
             },
-            onShow(){
-                //App业务代码
-                APP_STATISTICS.page_show( this );
-            },
-            onHide() {
-                //App业务代码
-                APP_STATISTICS.page_hide( this );
-            }            
+
+            // 统计代码
+            // onShow(){
+            //     //App业务代码
+            //     APP_STATISTICS.page_show( this );
+            //     $umeng_stat.resume(this);
+            // },
+            // onHide() {
+            //     //App业务代码
+            //     APP_STATISTICS.page_hide( this );
+            //     $umeng_stat.pause(this);
+            // }            
         }
       </script>

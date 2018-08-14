@@ -167,7 +167,7 @@
         },
         onInit(){
             let date = new Date();
-            let hour = date.getHours();
+            let hour = date.getHours()%12;
             let minute = date.getMinutes();
             let second = date.getSeconds();
 
@@ -194,16 +194,18 @@
         onMenuPress() {
             this.$app.$def.showMenu();
         },
-        onShow(){
-            //App业务代码
-            APP_STATISTICS.page_show( this );
-            // $umeng_stat.resume(this);
-            },
-        onHide() {
-            //App业务代码
-            APP_STATISTICS.page_hide( this );
-            // $umeng_stat.pause(this);
-        }                      
+        
+        // 统计代码
+        // onShow(){
+        //     //App业务代码
+        //     APP_STATISTICS.page_show( this );
+        //     $umeng_stat.resume(this);
+        //     },
+        // onHide() {
+        //     //App业务代码
+        //     APP_STATISTICS.page_hide( this );
+        //     $umeng_stat.pause(this);
+        // }                      
     };
 
     
