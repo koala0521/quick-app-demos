@@ -154,3 +154,6 @@ DIST
 build
 build / *
 * / * / build
+
+.history
+* / * / .history
