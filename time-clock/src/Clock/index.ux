@@ -166,34 +166,32 @@
             this.$element('hour');
         },
         onInit(){
-            let date = new Date();
-            let hour = date.getHours()%12;
-            let minute = date.getMinutes();
-            let second = date.getSeconds();
-
-            this.secondsClass = 'rorate-' + (second*6 + 90)%360;
-            this.minuteClass = 'rorate-' + (minute*6 + 90)%360;
-            this.hourClass = 'rorate-' + (hour*30 + 90)%360;
-           
+            this.run();           
         },
         onReady(){
             
-            setInterval(()=>{
-
-                let date = new Date();
-                let hour = date.getHours()%12;
-                let minute = date.getMinutes();
-                let second = date.getSeconds();
-
-                this.secondsClass = 'rorate-' + (second*6 + 90)%360;
-                this.minuteClass = 'rorate-' + (minute*6 + 90)%360;
-                this.hourClass = 'rorate-' + (hour*30 + 90)%360;
-                // this.hourClass = 'hour-rorate-' + deg;
+            setInterval(()=>{            
+                this.run(); 
             },1000)
         },
         onMenuPress() {
             this.$app.$def.showMenu();
         },
+        run(){
+            let d = 360,
+                initDeg = 90,
+                date = new Date(),
+                hour = date.getHours()%12,
+                minute = date.getMinutes(),
+                second = date.getSeconds(),
+                hDeg = hour*30,
+                minDeg = minute * 6,  
+                minRage = Math.floor( minDeg / 72 );
+                
+            this.secondsClass = 'rorate-' + (second*6 + initDeg) % d;
+            this.minuteClass = 'rorate-' + ( minDeg + initDeg ) % d;
+            this.hourClass = 'rorate-' + ( hDeg + initDeg + minRage * 6 ) % d;
+        }
         
         // 统计代码
         // onShow(){

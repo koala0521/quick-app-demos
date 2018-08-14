@@ -32,6 +32,9 @@
       },
       "Home":{
         "component": "index"
+      },
+      "About":{
+        "component": "index"
       }
     }
   },
@@ -43,10 +46,14 @@
     "pages": {
       "Home": {
         "titleBarText": "时光时钟",
-        "menu": false
+        "menu": true
       },
       "Clock":{
         "titleBarText": "时光时钟",
+        "menu": true        
+      },
+      "About":{
+        "titleBarText": "关于我们",
         "menu": false        
       }
     }
