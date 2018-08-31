@@ -1,8 +1,8 @@
 {
-  "package": "com.timeClock.quickapp",
+  "package": "com.jingZheTimeClock.app",
   "name": "时光时钟",
-  "versionName": "3.2.0",
-  "versionCode": "7",
+  "versionName": "1.0.0",
+  "versionCode": "1",
   "minPlatformVersion": "1000",
   "icon": "/Common/logo.png",
   "features": [
@@ -13,7 +13,8 @@
     {"name": "system.storage"},
     {"name": "system.device"},
     {"name": "system.network"},
-    {"name": "service.account"}    
+    {"name": "service.account"},
+    {"name": "system.webview"}    
   ],
   "permissions": [
     { "origin": "*" }
@@ -21,7 +22,7 @@
   "config": {
     "logLevel": "debug",
     "data":{
-      "umeng_appkey":"5b349563f29d98040200000c"
+      "umeng_appkey": "5b890d78f29d98283800000c"
     }
   },
   "router": {

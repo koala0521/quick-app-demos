@@ -1,0 +1,8 @@
+<template>
+        <web id="web" src="http://dev.tongji.so-quick.cn/home/list"></web>
+</template>
+<script>
+    // import webview from '@system.webview'
+    export default {}
+    
+</script>

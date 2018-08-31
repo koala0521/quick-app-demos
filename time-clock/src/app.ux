@@ -1,9 +1,7 @@
 <script>
-	// 测试
-	//  import APP_STATISTICS from './appStatistics.test.min';
 
 	// 上线
-	import './appStatistics.min';
+	import './sdk/1.2.2.2/appStatistics.min.js';
 	import './umenganalysis.es.min';
 
 	/**
@@ -16,8 +14,8 @@
 		createShortcut: util.createShortcut,
 		onCreate: function () {
 			// //统计打点
-			// APP_STATISTICS.app_sta_init(this);
-			// $umeng_stat.init(this); 
+			APP_STATISTICS.app_sta_init(this);
+			$umeng_stat.init(this); 
 		},
 		createShortcut: util.createShortcut,
 		showMenu: util.showMenu

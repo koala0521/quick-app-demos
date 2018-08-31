@@ -1,8 +1,8 @@
 <template>
     <div class="home-page">
         <div class="title-wrap" >
-            <div><text  class="title" >逝者如斯夫，不舍昼夜。</text></div>
-            <div class="title-writer" ><text  class="title" > --孔子《论语》</text></div>
+            <div><text  class="title" >{{ text }}</text></div>
+            <div class="title-writer" ><text  class="title" > -- {{ author }}</text></div>
         </div>
         <div class="img-wrap" >
             <image class="kunzi" src="../Common/kongzi.jpg" ></image>
@@ -51,46 +51,75 @@
         width: 340px;
         height: 100px;
         margin-top: 80px;
-        /* background-color: #ffffff; */
-        /* font-size: 40px; */
         font-weight: normal;
         color: #101010;
         background-image: url('../Common/button.jpg');    
         background-size: cover;    
-        /* border:  1px solid #e20a0a; */
+    }
+    .test{
+        color: #1d6ed8;
+        font-size: 50px;
     }
 </style>
 
 <script>
-        import router from '@system.router'
-      
+        import router from '@system.router';
+        let map = [
+            {
+                text: '逝者如斯夫，不舍昼夜。' ,
+                author: '孔子' 
+            },{
+                text: '人生天地之间，若白驹过隙，忽然而已。' ,
+                author: '庄子' 
+            },
+            {
+                text: '少年易学老难成，一寸光阴不可轻。' ,
+                author: '朱熹'
+            },{
+                text: '少壮不努力，老大徒伤悲。' ,
+                author: '曾国藩'
+            },
+            {
+                text: '人行犹可复，岁月哪可追？' ,
+                author: '苏轼'
+            }
+        ];
         export default {
-            // 页面级组件的数据模型，影响传入数据的覆盖机制：private内定义的属性不允许被覆盖
-            private: {
-            title: '>>'
+            // 页面级组件的数据模型
+            protected: {
+                text: '',
+                author: '',
+            },
+            onInit () {
+                let n = Math.floor( Math.random()* 10 ) % 5;
+                this.text = map[n].text;
+                this.author = map[n].author;
             },
             routeDetail () {
                 // 跳转到应用内的某个页面，router用法详见：文档->接口->页面路由
                 router.push ({
                     uri: '/Clock'
-                })
-            
+                })            
             },
-            onMenuPress(){
-                console.log('>>>>>>>');
-                this.$app.$def.showMenu();                
-            }
-
+            onMenuPress(){               
+                this.$app.$def.showMenu();            
+            },
             // 统计代码
-            // onShow(){
-            //     //App业务代码
-            //     APP_STATISTICS.page_show( this );
-            //     $umeng_stat.resume(this);
-            // },
-            // onHide() {
-            //     //App业务代码
-            //     APP_STATISTICS.page_hide( this );
-            //     $umeng_stat.pause(this);
-            // }            
+            onShow(){
+                
+                //App业务代码
+                APP_STATISTICS.page_show( this );
+                $umeng_stat.resume(this);
+
+                let n = Math.floor( Math.random()* 10 ) % 5;
+                this.text = map[n].text;
+                this.author = map[n].author;
+            },
+
+            onHide(){
+                //App业务代码
+                APP_STATISTICS.page_hide( this );
+                $umeng_stat.pause(this);
+            },        
         }
       </script>
