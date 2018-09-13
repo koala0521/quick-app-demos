@@ -8,8 +8,12 @@
             <image class="kunzi" src="../Common/kongzi.jpg" ></image>
         </div>
         <div>
-            <input class="btn" type="button" value="" onclick="routeDetail" />
+            <input class="btn" type="button" onclick="routeDetail" />
         </div>       
+        <!-- <div>
+            <input class="btn" type="button" onclick="routeTest" />
+        </div>      -->
+
     </div>
 </template>
 
@@ -121,5 +125,12 @@
                 APP_STATISTICS.page_hide( this );
                 $umeng_stat.pause(this);
             },        
+
+            // 测试
+            // routeTest(){
+            //     router.push ({
+            //         uri: '/Test'
+            //     })  
+            // }
         }
       </script>

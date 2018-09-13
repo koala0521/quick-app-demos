@@ -1,5 +1,8 @@
 <template>
-        <web id="web" src="http://dev.tongji.so-quick.cn/home/list"></web>
+    <!-- <web id="web" src="https://h5.m.taobao.com/"></web>-->
+     <div>
+        <text>测试页面</text>
+     </div>
 </template>
 <script>
     // import webview from '@system.webview'
