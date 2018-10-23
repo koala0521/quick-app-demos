@@ -128,10 +128,21 @@
     .rorate-342{transform: rotate(342deg)} 
     .rorate-348{transform: rotate(348deg)} 
     .rorate-354{transform: rotate(354deg)} 
+    .date{
+        margin-bottom: 100px;
+        color: #101010;
+    }
+    .date-text{
+        color: #101010;
+        font-size: 32px;
+        width: 100%;
+        text-align: center;
+    }
 </style>
 
 <template>
     <div class="clock-page">
+        <div class="date"><text class="date-text" >{{ date }} {{ time }}</text></div>
         <div class="clock-wrap">
             <stack class="cicle" >
                 <div class="zhizhen seconds {{ secondsClass }}" id="seconds" >
@@ -146,13 +157,22 @@
                 </div>                
                 <div class="pointer"></div>
             </stack>
-        </div>        
+        </div>   
+        <!-- <div class="time"><text>{{ time }}</text></div>      -->
     </div>
 </template>
 
 <script>
-    let classObj = {
-
+    let dateMap = {
+        week:{
+            1:'星期一',
+            2:'星期二',
+            3:'星期三',
+            4:'星期四',
+            5:'星期五',
+            6:'星期六',
+            0:'星期日',
+        }
     };
     export default {
         // 页面级组件的数据模型，影响传入数据的覆盖机制：private内定义的属性不允许被覆盖
@@ -160,7 +180,9 @@
             message: '逝者如斯夫，不舍昼夜。',
             hourClass:'',
             minuteClass:'',
-            secondsClass:''   
+            secondsClass:'',
+            date:'',
+            time:''   
         },
         hourRotate(){
             this.$element('hour');
@@ -181,16 +203,25 @@
             let d = 360,
                 initDeg = 90,
                 date = new Date(),
+                year = date.getFullYear(),
+                month = date.getMonth(),
+                day = date.getDate(),
+                week = date.getDay(),
                 hour = date.getHours()%12,
                 minute = date.getMinutes(),
                 second = date.getSeconds(),
                 hDeg = hour*30,
                 minDeg = minute * 6,  
                 minRage = Math.floor( minDeg / 72 );
+
+            let addZero = second < 10 ? `0${ second }` : second;
                 
             this.secondsClass = 'rorate-' + (second*6 + initDeg) % d;
             this.minuteClass = 'rorate-' + ( minDeg + initDeg ) % d;
             this.hourClass = 'rorate-' + ( hDeg + initDeg + minRage * 6 ) % d;
+
+            this.date = `${ year } - ${ month } - ${ day } ${ dateMap.week[week] }`;
+            this.time = `${ date.getHours() } : ${ minute } : ${ addZero }`;
         },
         
         // 统计代码

@@ -11,7 +11,8 @@
     "debug": "hap debug",
     "build": "hap build",
     "release": "hap release",
-    "watch": "hap watch"
+    "watch": "hap watch",
+    "hap-update": "hap update"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -22,7 +23,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.1.4",
     "css-what": "^2.1.0",
-    "hap-toolkit": "0.0.34",
+    "hap-toolkit": "file:/Applications/快应用开发工具.app/Contents/Resources/app/extensions/hap-debugger/toolkit/hap-toolkit.tgz",
     "koa": "^2.3.0",
     "koa-body": "^2.5.0",
     "koa-router": "^7.2.1",
@@ -30,5 +31,8 @@
     "koa-static": "^4.0.1",
     "socket.io": "^2.1.0",
     "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "js-base64": "^2.4.9"
   }
 }
