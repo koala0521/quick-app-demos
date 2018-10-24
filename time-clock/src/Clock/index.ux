@@ -142,7 +142,7 @@
 
 <template>
     <div class="clock-page">
-        <div class="date"><text class="date-text" >{{ date }} {{ time }}</text></div>
+        <div class="date"><text class="date-text" >{{ date }}</text></div>
         <div class="clock-wrap">
             <stack class="cicle" >
                 <div class="zhizhen seconds {{ secondsClass }}" id="seconds" >
@@ -157,8 +157,7 @@
                 </div>                
                 <div class="pointer"></div>
             </stack>
-        </div>   
-        <!-- <div class="time"><text>{{ time }}</text></div>      -->
+        </div>           
     </div>
 </template>
 

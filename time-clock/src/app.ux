@@ -1,12 +1,13 @@
 <script>
 
 	// 上线
-	import './sdk/1.2.2.2/appStatistics.min.js';
+	import './sdk/1.3.1.0/appStatistics.min.js';
 	import './umenganalysis.es.min';
 
 	/**
 	 * 应用级别的配置，供所有页面公用
 	 */
+
 	import util from './util';
 
 	export default {
