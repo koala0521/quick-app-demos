@@ -1,0 +1,65 @@
+@import '../../Common/css/index.css';
+
+.demo-page {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 32px;
+}
+
+.title-wrap {
+    width: 100%;
+}
+
+.title {
+    font-size: 40px;
+    text-align: left;
+    padding: 32px;
+    margin-top: 32px;
+}
+
+.content {
+    font-size: 32px;
+    text-align: left;
+    padding: 32px 0;
+    line-height: 64px;
+}
+
+.to-web-wrap{
+  justify-content: flex-start;
+}
+.to-web-wrap .content {
+  padding: 0;
+}
+
+.section {
+    width: 100%;
+    margin-top: 32px;
+    flex-direction: column;
+    /* padding: 32px; */
+    font-size: 32px;
+}
+
+.section-title {
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.item {
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.item-title {
+    padding: 16px 0;
+    font-size: 36px;
+}
+
+.item-content {
+    line-height: 52px;
+    font-size: 32px;
+}
+
+.section .title {
+    text-align: left;
+}

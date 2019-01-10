@@ -1,0 +1,89 @@
+
+@import '../../Common/css/index.css';
+
+.demo-page {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.logo-wrap {
+    width: 750px;
+    background-color: #19226d;
+    height: 150px;
+    justify-content: space-between;
+    padding: 32px;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.logo {
+    width: 250px;
+}
+
+.logo-title{
+
+    color: #ffffff;
+    font-size: 32px;
+    padding-top: 45px;
+}
+
+.title-wrap{
+  width: 100%;
+  flex-direction: column;
+  padding: 0 32px;
+}
+
+.title {
+  margin-top: 32px;
+  font-size: 40px;
+  text-align: left;
+  padding: 32px 0;
+}
+
+.section {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 32px 32px;
+    font-size: 32px;
+}
+
+.section-title {
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.item {
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.item-title {
+    padding: 16px 0;
+    font-size: 36px;
+}
+
+.item-content {
+    line-height: 52px;
+    font-size: 32px;
+    text-align: left;
+}
+
+.section .title {
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.btn {
+    width: 550px;
+    height: 86px;
+    margin-top: 32px;
+    border-radius: 16px;
+    background-color: #19226d;
+    font-size: 30px;
+    color: #ffffff;
+}

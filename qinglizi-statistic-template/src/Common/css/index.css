@@ -1,0 +1,44 @@
+/* 公共 css 文件 */
+.border-1{
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+.wfull{
+    width: 100%;
+}
+.hfull{
+    height: 100%;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+
+.p32{
+    padding: 32px;
+}
+.pt32{
+    padding-top: 32px;
+}
+.pb32{
+    padding-bottom: 32px;
+}
+.pl32{
+    padding-left: 32px;
+}
+.pr32{
+    padding-right: 32px;
+}
+.ptb32{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.link{
+    color: #4183c4;
+}
+.bold{
+    font-weight: bold;
+}

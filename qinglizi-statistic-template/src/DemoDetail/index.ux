@@ -1,0 +1,81 @@
+<template>
+    <!-- template里只能有一个根节点 -->
+    <div class="demo-page">
+        <div class="column title-wrap">
+            <text class="title">{{ title }}</text>
+            <div class="border-1"></div>
+        </div>
+        <div class="wfull ptb32">
+            <image class="wfull" src="../Common/img/banner.jpeg"></image>
+        </div>
+        <text class="content">{{ text }}</text>
+        <!-- 优势 -->
+        <div class="section">
+            <text class="section-title pb32">我们的优势</text>
+            <div class="border-1"></div>
+
+            <div class="item">
+                <div><text class="item-title">精准的计算</text></div>
+                <text class="item-content">依托公司独有的算法实现精准计算</text>
+            </div>
+
+            <div class="item">
+                <div><text class="item-title">丰富的功能</text></div>
+                <text class="item-content">基础报表完善包括日常PV、UV、活跃、留存、用户画像、自定义事件、事件漏斗等
+                  </text>
+            </div>
+
+            <div class="item">
+                <div><text class="item-title">简单的接入</text></div>
+                <text class="item-content">接入方式简单易懂实现快速接入</text>
+            </div>
+
+            <div class="item">
+                <div><text class="item-title">贴心的服务</text></div>
+                <text class="item-content">客服人员随时恭候</text>
+            </div>
+        </div>
+        <!-- 更多 -->
+        <div class="wfull to-web-wrap section pb32">
+          <text class="section-title ptb32">更多</text>
+            <div class="border-1"></div>
+          <div class="item" >
+            <div>
+              <text class="content">关于我们：</text>
+              <text class="content link" @click="toweb">轻粒子官网</text>
+            </div>
+            
+          </div>
+        </div>
+
+
+    </div>
+</template>
+
+<style src="./css/index.css"></style>
+
+<script>
+import webview from "@system.webview";
+
+// 页面打点：sdk 提供的全局函数 Custom_page 实现统计打点
+export default Custom_page({
+    private: {
+        title: "平台简介",
+        text:
+            "轻粒子快应用数据统计分析平台是为快应用专门打造的一款数据统计分析产品，除提供日常基础数据统计服务以外，包括：日常uv、pv、留存、活跃度、用户画像、自定义事件、事件漏斗等；同时还基于快应用标准专门开发了许多特色功能，如桌面icon（图标）创建情况分析、手机厂商流量分析、入口来源流量分析等。"
+    },
+    /**
+     * 当用户点击菜单按钮时触发，调用app中定义的方法showMenu
+     * 注意：使用加载器测试`创建桌面快捷方式`功能时，请先在`系统设置`中打开`应用加载器`的`桌面快捷方式`权限
+     */
+    onMenuPress() {
+        this.$app.$def.showMenu();
+    },
+    toweb() {
+        webview.loadUrl({
+            url: "http://www.qinglizi.cn/",
+            allowthirdpartycookies: true
+        });
+    }
+});
+</script>
